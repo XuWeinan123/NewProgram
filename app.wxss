@@ -1,0 +1,36 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  padding: 0rpx 0rpx;
+  box-sizing: border-box;
+} 
+.float-button {
+  width: 128rpx;
+  height: 128rpx;
+  display: block;
+  /*background:url("/image/add.png") no-repeat;*/
+  padding: 0;
+  background-size: cover;
+  position: fixed;
+  right: 64rpx;
+  bottom: 64rpx;
+  border-radius: 50%;
+  z-index: 999;
+}
+.float-button2 {
+  width: 128rpx;
+  height: 128rpx;
+  display: block;
+  /*background:url("/image/add.png") no-repeat;*/
+  padding: 0;
+  background-size: cover;
+  position: fixed;
+  right: 64rpx;
+  bottom: 224rpx;
+  border-radius: 50%;
+  z-index: 999;
+}

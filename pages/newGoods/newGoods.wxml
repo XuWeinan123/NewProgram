@@ -1,0 +1,98 @@
+<!--pages/newGoods.wxml-->
+
+
+<image class="releaser-avatar" src="{{releaser_avaratUrl}}"></image>
+<text class='releaser-name'>{{releaser_name}}</text>
+<!--<text>发布者</text>-->
+
+<view class="container">
+  <image class='image-class' bindtap='picTap' src="{{image_src}}" mode='aspectFit'></image>
+  <view class='contact-padding' bindtap='priceLabelTap'>
+    <text class='setting-price'>{{price}}</text>
+  </view>
+  <view class='contact-padding' bindtap='nameLabelTap'>
+    <text class='setting-name'>{{name}}</text>
+  </view>
+  <view class='contact-padding' bindtap='wechatLabelTap' style="flex-direction:row;">
+    <text class='contact1'>联系微信</text>
+    <text class='contact2'>{{wechat}}</text>
+  </view>
+  <view class='contact-padding' bindtap='mailLabelTap' style="flex-direction:row;">
+    <text class='contact1'>联系邮箱</text>
+    <text class='contact2'>{{mail}}</text>
+  </view>
+  <view class="textarea-wrp contact-padding">
+    <textarea class="textarea-bio" rows="3" placeholder="简介" maxlength='100' rows="2" bindblur= "bioInputBlur" />
+  </view>
+</view>
+<image class="float-button" bindtap="toAddGoods" src="/images/surefloatBtn.png"></image>
+<!--价格弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{priceModal}}"></view>
+<view class="modal-dialog" wx:if="{{priceModal}}">
+  <view class="modal-title">商品价格</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input id="price-input" placeholder-class="input-holder" type="digit" maxlength="6" bindblur="inputBlur" class="input" placeholder="请输入价格"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+<!--名称弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{nameModal}}"></view>
+<view class="modal-dialog" wx:if="{{nameModal}}">
+  <view class="modal-title">商品名称</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input id="name-input" placeholder-class="input-holder" type="text" maxlength="40" bindblur="nameInputBlur" class="input" placeholder="请输入名称"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="nameOnConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+<!--微信弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{wechatModal}}"></view>
+<view class="modal-dialog" wx:if="{{wechatModal}}">
+  <view class="modal-title">联系微信</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input id="name-input" placeholder-class="input-holder" type="text" maxlength="40" bindblur="wechatInputBlur" class="input" placeholder="请输入微信"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="wechatOnConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+<!--邮箱弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{mailModal}}"></view>
+<view class="modal-dialog" wx:if="{{mailModal}}">
+  <view class="modal-title">联系邮箱</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input id="name-input" placeholder-class="input-holder" type="text" maxlength="40" bindblur="mailInputBlur" class="input" placeholder="请输入邮箱"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="mailOnConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+<!--确定添加弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{sureModal}}"></view>
+<view class="modal-dialog" wx:if="{{sureModal}}">
+  <view class="modal-title">确定添加？</view>
+  <view class="modal-content">
+    <view>
+      <text class='contact2'>添加之后要再修改可就难了</text>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="sureOnConfirm" data-status="confirm">确定</view>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<navigator url='../newGoods/newGoods'>
+  <image class="float-button" bindtap="toAddGoods" src="/images/floatBtn.png"></image>
+</navigator>
+<navigator url='../userCenter/userCenter' wx:if="{{isAuth}}">
+  <image class="float-button2" src="{{user_avatar}}"></image>
+</navigator>
+<navigator url='../userCenter/userCenter' wx:if="{{!isAuth}}">
+  <button bindtap="refreshPage" open-type="getUserInfo">
+    <image class="float-button2" src="{{user_avatar}}"></image>
+  </button>
+</navigator>
+<view class="container">
+  <view class="grids grids-small">
+    <block wx:for="{{ components }}" wx:key="">
+      <navigator url="../buyGoods/buyGoods?picUrl={{item.picUrl}}&price={{item.price}}&name={{item.name}}&wechat={{item.wechat}}&mail={{item.mail}}&bio={{item.bio}}&releaserAvatarUrl={{item.releaserAvatarUrl}}&releaserName={{item.releaserName}}" class="grid">
+        <view>
+          <image class="grid_img" src="{{ item.picUrl }}" alt="" mode='aspectFill' />
+        </view>
+        <view class="grid_label">{{ item.name }}</view>
+        <view class="grid_bio">{{item.bio}}</view>
+      </navigator>
+    </block>
+  </view>
+</view>

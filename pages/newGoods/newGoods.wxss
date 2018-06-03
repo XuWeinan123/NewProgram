@@ -1,0 +1,171 @@
+/*发布者样式*/
+.releaser-avatar{
+  position: fixed;
+  height: 80rpx;
+  width: 80rpx;
+  right: 200rpx;
+  top: 454rpx;
+  display: block;
+  padding: 0;
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 999;
+}
+.releaser-name{
+  position: fixed;
+  height: 50rpx;
+  width: 144rpx;
+  right: 32rpx;
+  top: 470rpx;
+  overflow: hidden;
+  display: block;
+  padding: 0;
+  background-size: cover;
+  font-size: 36rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis
+}
+/* pages/newGoods.wxss */
+.textarea-bio{
+  font-size: 28rpx;
+  height: 120rpx;
+  
+}
+.image-class{
+  width: 100%;
+  height: 422rpx;
+}
+.setting-price{
+  font-size: 80rpx;
+  height: 80rpx;
+  margin-top: 32rpx;
+  margin-left: 40rpx;
+  color: #F5A623;
+  font-weight: 500;
+}
+.setting-name{
+  font-size: 52rpx;
+  height: 52rpx;
+  margin-top: 32rpx;
+  margin-left: 40rpx;
+  color: #9B9B9B;
+}
+.contact-padding{
+  margin-top: 16rpx;
+}
+.contactPhone{
+
+}
+.contact1{
+  font-size: 32rpx;
+  height: 32rpx;
+  margin-left: 40rpx;
+  color: #232323;
+}
+.contact2{
+  font-size: 32rpx;
+  height: 32rpx;
+  margin-left: 32rpx;
+  color: #9B9B9B;
+}
+.textarea-wrp {
+  padding-top: 25rpx;
+  padding-right: 25rpx;
+  padding-left: 25rpx;
+  padding-bottom: 25rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  background-color: #f0f0f0;
+  height: 120rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+/*下面是弹出框样式*/
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 50rpx 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}

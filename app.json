@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/newGoods/newGoods",
+    "pages/buyGoods/buyGoods",
+    "pages/userCenter/userCenter"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F5A623",
+    "navigationBarTitleText": "跳蚤市场",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f1f1f1"
+  }
+}

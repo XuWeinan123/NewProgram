@@ -1,0 +1,65 @@
+<!--pages/userCenter/userCenter.wxml-->
+<view class="default-wechat" bindtap='wechatLabelTap' style="flex-direction:row;">
+  <text class="default-bold">默认微信</text>
+  <text class="default-regular">{{wechat}}</text>
+</view>
+<view class="default-mail" bindtap='mailLabelTap' style="flex-direction:row;">
+  <text class="default-bold">默认邮箱</text>
+  <text class="default-regular">{{mail}}</text>
+</view>
+<view class="default-mygoods" style="flex-direction:row;">
+  <text class="default-bold">我的商品</text>
+  <!-- <text class="default-regular">{{itemcount}}</text> -->
+</view>
+<view class='divider'></view>
+<block wx:for="{{array}}" wx:key="price">
+  <view class="default-mail" style="flex-direction:row;" bindtap="deletaModal" data-id="{{index}}">
+    <text class="default-regular2">{{item.name}}</text>
+    <text class="default-thin">{{item.price}} 元</text>
+  </view>
+</block>
+<view class="ps_introduce_view">
+  <text class="ps_introduce">开发者注：这个小程序是我写完论文后随手写的，轻量级的跳蚤市场，主要是想方便自己卖一卖二手。二手仅限华科内部，毕竟加个地点又要画好多页面。</text>
+</view>
+<!--确定添加弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{sureModal}}"></view>
+<view class="modal-dialog" wx:if="{{sureModal}}">
+  <view class="modal-title">确定删除 {{currnetGoodsName}}？</view>
+  <view class="modal-content">
+    <view>
+      <text class='contact2'>删除之后无法撤销，请慎重</text>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="sureOnConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+<!--微信弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{wechatModal}}"></view>
+<view class="modal-dialog" wx:if="{{wechatModal}}">
+  <view class="modal-title">联系微信</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input id="name-input" placeholder-class="input-holder" type="text" maxlength="40" bindblur="wechatInputBlur" class="input" placeholder="请输入微信"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="wechatOnConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+<!--邮箱弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{mailModal}}"></view>
+<view class="modal-dialog" wx:if="{{mailModal}}">
+  <view class="modal-title">联系邮箱</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input id="name-input" placeholder-class="input-holder" type="text" maxlength="40" bindblur="mailInputBlur" class="input" placeholder="请输入邮箱"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="mailOnConfirm" data-status="confirm">确定</view>
+  </view>
+</view>

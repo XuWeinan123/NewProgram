@@ -1,0 +1,161 @@
+/* pages/userCenter/userCenter.wxss */
+
+.background-view {
+  height: 1206rpx;
+  width: 100%;
+  background: #f1f1f1;
+}
+.default-wechat {
+  height: 96rpx;
+  width: 100%;
+  background: #fff;
+  margin-top: 32rpx;
+  display: flex;
+  align-items: center;
+}
+.default-mail {
+  height: 96rpx;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+.default-mygoods{
+  height: 96rpx;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  margin-top: 32rpx
+}
+.divider{
+  height: 1rpx;
+  background: #eeeeee;
+  width: 100%
+}
+
+.default-bold {
+  margin-left: 32rpx;
+  font-size: 32rpx;
+  color: #4A4A4A
+}
+.default-regular {
+  margin-left: 32rpx;
+  font-size: 32rpx;
+  color: #9B9B9B
+}
+.default-regular2 {
+  margin-left: 48rpx;
+  font-size: 32rpx;
+  color: #9B9B9B
+}
+.default-thin {
+  margin-left: 32rpx;
+  font-size: 32rpx;
+  color: #DBDBDB
+}
+
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f1f1f1;
+}
+
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 50rpx 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}
+.contact2{
+  font-size: 32rpx;
+  height: 32rpx;
+  margin-left: 32rpx;
+  color: #9B9B9B;
+}
+.ps_introduce{
+  font-size:20rpx;
+  
+  color: #9B9B9B
+}
+.ps_introduce_view{
+  margin-top: 32rpx;
+  margin-right: 32rpx;
+  margin-left: 32rpx;
+  margin-bottom: 32rpx;
+  line-height: 100%;
+}
